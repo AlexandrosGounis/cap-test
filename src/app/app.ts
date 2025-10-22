@@ -1,12 +1,23 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {
+  IonApp,
+  IonButtons,
+  IonContent,
+  IonFooter,
+  IonHeader,
+  IonMenu,
+  IonMenuButton,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  imports: [RouterOutlet, IonFooter, IonButtons, IonContent, IonHeader, IonApp, IonMenu, IonMenuButton, IonTitle, IonToolbar],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class App {
   protected readonly title = signal('cap-test');
